@@ -1,6 +1,6 @@
-package com.qa.calculator;
+package com.qa.functions;
 
-public class Divide {
+public class Divider {
 
 	public double divide(double num1, double num2) {
 		return num1 / num2;

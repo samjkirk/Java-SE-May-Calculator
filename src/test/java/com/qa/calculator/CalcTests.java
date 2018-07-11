@@ -1,45 +1,40 @@
 package com.qa.calculator;
 
 import org.junit.Assert;
-import org.junit.Before;
+import org.junit.BeforeClass;
 import org.junit.Test;
+import com.qa.calculator.Calculator;
 
 public class CalcTests {
-	Add add;
-	Multiply multi;
-	Subtract sub;
-	Divide div;
+	static Calculator calc;
 	
-	@Before
-	public void setUp() {
-		add = new Add();
-		multi = new Multiply();
-		sub = new Subtract();
-		div = new Divide();
+	@BeforeClass
+	public static void setUp() {
+		calc = new Calculator();
 	}
 
 	@Test
 	public void addTest() {
-		int actualValue = add.add(2, 2);
-		Assert.assertEquals(4, actualValue);
+		double actualValue = calc.add(2, 2);
+		Assert.assertEquals(4, actualValue, 0.001);
 	}
 	
 	@Test
 	public void multiplyTest() {
-		int actualValue = multi.multiply(2, 3);
-		Assert.assertEquals(6, actualValue);
+		double actualValue = calc.multi(2, 3);
+		Assert.assertEquals(6, actualValue, 0.001);
 	}
 	
 	@Test
 	public void subtractTest() {
-		int actualValue = sub.subtract(10, 5);
-		Assert.assertEquals(5, actualValue);
+		double actualValue = calc.sub(10, 5);
+		Assert.assertEquals(5, actualValue, 0.001);
 	}
 	
 	@Test
 	public void divideTest() {
-		double actualValue = div.divide(5.0, 2.0);
-		Assert.assertEquals(2.5, actualValue, 0.0);
+		double actualValue = calc.div(5.0, 2.0);
+		Assert.assertEquals(2.5, actualValue, 0.001);
 	}
 
 }
