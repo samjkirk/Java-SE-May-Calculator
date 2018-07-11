@@ -3,7 +3,7 @@ package com.qa.calculator;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class CalculatorTest {
+public class AddTest {
 
 	@Test
 	public void test() {
