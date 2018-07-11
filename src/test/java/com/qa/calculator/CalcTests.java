@@ -15,6 +15,7 @@ public class CalcTests {
 		add = new Add();
 		multi = new Multiply();
 		sub = new Subtract();
+		div = new Divide();
 	}
 
 	@Test
@@ -37,8 +38,8 @@ public class CalcTests {
 	
 	@Test
 	public void divideTest() {
-		double actualValue = div.divide(10, 5);
-		Assert.assertEquals(2, actualValue, 0.0);
+		double actualValue = div.divide(5.0, 2.0);
+		Assert.assertEquals(2.5, actualValue, 0.0);
 	}
 
 }
